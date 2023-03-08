@@ -1,0 +1,79 @@
+{
+  "id": "3403358",
+  "name": "YunZ",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21721553",
+      "name": "文件类型-标准图-未知文件",
+      "font_class": "wenjianleixing-biaozhuntu-weizhiwenjian",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    },
+    {
+      "icon_id": "23521887",
+      "name": "txt",
+      "font_class": "txt",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "10573487",
+      "name": "cargo-ship",
+      "font_class": "sharpicons_cargo-ship",
+      "unicode": "e82d",
+      "unicode_decimal": 59437
+    },
+    {
+      "icon_id": "26727753",
+      "name": "视频，短视频，媒体",
+      "font_class": "a-shipinduanshipinmeiti",
+      "unicode": "e787",
+      "unicode_decimal": 59271
+    },
+    {
+      "icon_id": "8223331",
+      "name": "文件夹",
+      "font_class": "wenjianjia",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "10135275",
+      "name": "pdf",
+      "font_class": "pdf",
+      "unicode": "e8ba",
+      "unicode_decimal": 59578
+    },
+    {
+      "icon_id": "13149318",
+      "name": "图片文件",
+      "font_class": "tupianwenjian",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "16388846",
+      "name": "ppt备份",
+      "font_class": "pptbeifen",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "16388848",
+      "name": "excel备份",
+      "font_class": "excelbeifen",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "16388855",
+      "name": "Word备份",
+      "font_class": "Wordbeifen",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    }
+  ]
+}
