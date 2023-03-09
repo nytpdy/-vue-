@@ -116,10 +116,11 @@ let icons = {
   }
 }
 import indexApi from "../api/index.js"
+import Url from "../utils/request.js"
 export default {
   data() {
     return {
-      url: "http://192.168.100.78:5000/download?fileName=",
+      url: Url.flaskUrl + "/download?fileName=",
       value: "",
       imgUrl: "",
       srcList: [],
@@ -198,7 +199,7 @@ export default {
       //   fileType: this.item.fileType,
       //   fileName: this.item.fileName
       // })
-      window.open(' http://192.168.100.78:8000/' + url)
+      window.open(Url.nodeServelUrl + url)
     }
   }
 }

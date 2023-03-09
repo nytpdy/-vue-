@@ -2,10 +2,12 @@ import axios from "axios"//引入axios
 
 
 //创建axios实例
+let flaskUrl = "http://192.168.100.78:5000"
+let nodeServelUrl = "http://192.168.100.78:8000/"
 
 const request = axios.create({
   //请求的公共接口地址
-  baseURL: "http://192.168.100.78:5000",
+  baseURL: flaskUrl,
   //请求的超时时间
   timeout: 5000,
 })
@@ -42,4 +44,8 @@ const request = axios.create({
 
 
 //导出axios实例
-export default request
+export default {
+  request,
+  flaskUrl,
+  nodeServelUrl
+}

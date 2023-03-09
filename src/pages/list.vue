@@ -56,15 +56,8 @@ import axios from 'axios'
 import mediaList from "../components/media-list.vue"
 import indexApi from "../api/index.js"
 import { getCookie } from '../assest/cookie.js'
-// 重写alert
-// window.alert=function(name){
-//   var iframe=document.createElement("IFRAME");
-//   iframe.style.display="none";
-//   iframe.setAttribute("src",'data:text/plain,');
-//   document.documentElement.appendChild(iframe);
-//   window.frames[0].window.alert(name);
-//   iframe.parentNode.removeChild(iframe);
-// }
+import Url from '../utils/request.js'
+
 export default {
   components: {
     mediaList,
@@ -109,7 +102,7 @@ export default {
       form.append("file", params.file);
       form.append("userName", name);
 
-      const res = await axios.post("http://192.168.100.78:5000/upload", form);
+      const res = await axios.post(Url.flaskUrl + "/upload", form);
       console.log(res);
       this.imageUrl = res.data;
       this.initData()
@@ -358,6 +351,7 @@ export default {
     //批量删除方法
     deleteItem(data) {
       let name = getCookie("username")
+      let permissions = getCookie("permissions")
       console.log(data)
       console.log(name)
       console.log(this.checkList)
@@ -366,7 +360,7 @@ export default {
         console.log("进入if")
         this.checkList.map((checkList) => {
           console.log(checkList)
-          if (name != checkList.userName) {
+          if (name != checkList.userName && permissions != 1) {
 
             //  alert("你没有操作"+checkList.fileName+"文件权限")
             setTimeout(() => {
@@ -383,7 +377,7 @@ export default {
       }
       else {
         console.log("进入else")
-        if (name != data.userName) {
+        if (name != data.userName && permissions != 1) {
           this.$Modal.confirm({
             title: "用户错误",
             content: "你没有操作" + data.fileName + "文件权限"
