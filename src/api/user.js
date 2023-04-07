@@ -1,14 +1,15 @@
 import API from "../utils/request.js"
 
 //注册接口
-export function userRegister(userName, userPassword, userEmail) {
+export function userRegister(ver, name, password, email) {
   return API.request({
-    url: "/api/reg",
-    method: "POST",
+    url: "/confirmCreation",
+    method: "post",
     data: {
-      userName,
-      userPassword,
-      userEmail
+      'ver': ver,
+      'name': name,
+      'password': password,
+      'email': email
     }
   })
 }

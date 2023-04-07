@@ -36,8 +36,25 @@ function getCollection(username) {
 //获取验证码
 function getEmail(address) {
   return API.request({
-    url: "/api/mail/" + address,
+    url: "/setmail",
     method: "POST",
+    data: {
+      'address': address
+    }
+  })
+}
+
+//确认验证
+function confirmCreation(ver, name, password, email) {
+  return API.request({
+    url: "/confirmCreation",
+    method: "post",
+    data: {
+      'ver': ver,
+      'name': name,
+      'password': password,
+      'email': email
+    }
   })
 }
 
